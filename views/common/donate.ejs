@@ -1,0 +1,89 @@
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModalCenter"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">
+          Make a Donation Now!
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="paypal_donate_form">
+          <div class="row">
+            <% if (!user) { %>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label><strong>Full name</strong></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputName"
+                  aria-describedby="NameHelp"
+                  placeholder="Enter Name"
+                />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <label><strong>Email</strong></label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+              </div>
+            </div>
+            <% } %>
+            <div class="col-sm-6">
+              <div class="form-group mb-20 text-black">
+                <label><strong>Currency</strong></label>
+                <select name="currency_code" class="form-control">
+                  <option value="">Select Currency</option>
+                  <option value="UGX" selected="selected">
+                    UGX -Uganda Shillings
+                  </option>
+                  <option value="USD">USD - United States Dollars</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="form-group mb-20 text-black">
+                <label><strong>Amount</strong></label>
+                <input type="number" name="amount" placeholder="Amount" />
+              </div>
+            </div>
+
+            <div class="col-md-12 text-black">
+              <img src="/images/payment-card-logo-sm.png" alt="" />
+              <img
+                src="https://ug.jumia.is/cms/logo/MTN-Airtel-Logo.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Donate Now</button>
+      </div>
+    </div>
+  </div>
+</div>
